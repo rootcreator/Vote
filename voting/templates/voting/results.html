@@ -1,0 +1,11 @@
+{% extends 'voting/base.html' %}
+{% block content %}
+<h2>Results for {{ election.name }}</h2>
+<ul class="list-group">
+    {% for candidate, votes in results.items %}
+        <li class="list-group-item">
+            {{ candidate.name }}: {{ votes }} votes
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

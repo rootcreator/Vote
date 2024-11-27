@@ -1,0 +1,12 @@
+{% extends 'voting/base.html' %}
+{% block content %}
+<h2>Available Elections</h2>
+<ul class="list-group">
+    {% for election in elections %}
+        <li class="list-group-item">
+            <a href="{% url 'vote' election.id %}">{{ election.name }}</a> 
+            ({{ election.start_date }} - {{ election.end_date }})
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
