@@ -73,5 +73,9 @@ def vote(request, election_id):
 def results(request, election_id):
     election = get_object_or_404(Election, id=election_id)
     votes = election.votes.all()
+
+    # Count votes and sort by the number of votes
     results = Counter(vote.candidate for vote in votes)
-    return render(request, "voting/results.html", {"election": election, "results": results})
+    sorted_results = sorted(results.items(), key=lambda x: x[1], reverse=True)
+
+    return render(request, "voting/results
