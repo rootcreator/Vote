@@ -15,7 +15,7 @@ SECRET_KEY = 'django-insecure-88(4(h8in*ls&rbioyw(d^!ssl)@gr3pkhh=_se1%bm!79%+g3
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["vote-ised.onrender.com"]
 
 AUTH_USER_MODEL = 'voting.User'
 
