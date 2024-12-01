@@ -6,6 +6,6 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('elections/', include('voting.urls'))
+    path('', include('voting.urls'))
 ]
 
