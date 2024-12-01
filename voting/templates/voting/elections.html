@@ -1,12 +1,22 @@
 {% extends 'voting/base.html' %}
 {% block content %}
-<h2>Available Elections</h2>
-<ul class="list-group">
-    {% for election in elections %}
-        <li class="list-group-item">
-            <a href="{% url 'vote' election.id %}">{{ election.name }}</a> 
-            ({{ election.start_date }} - {{ election.end_date }})
-        </li>
-    {% endfor %}
-</ul>
+<div class="container mt-4">
+    <h2 class="text-center">Available Elections</h2>
+    <div class="row">
+        {% for election in elections %}
+        <div class="col-md-4 col-sm-6 mb-4">
+            <div class="card h-100">
+                <div class="card-body">
+                    <h5 class="card-title">{{ election.name }}</h5>
+                    <p class="card-text">
+                        Start Date: {{ election.start_date }}<br>
+                        End Date: {{ election.end_date }}
+                    </p>
+                    <a href="{% url 'vote' election.id %}" class="btn btn-primary btn-block">View Election</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
 {% endblock %}
