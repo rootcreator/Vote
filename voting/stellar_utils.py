@@ -14,7 +14,7 @@ def create_stellar_account():
 
 def fund_account(account_id):
     server = Server("https://horizon.stellar.org")
-    source_keypair = Keypair.from_secret("YOUR_SECRET_KEY")  # Replace with your source account
+    source_keypair = Keypair.from_secret("SCIDYLKG42HTQDCBVXOWSLNTXXDNZOWKSWL66PLW4XYRWN4GO2NVPZ52")  # Replace with your source account
     source_account = server.load_account(source_keypair.public_key)
 
     # Check if the account already exists
