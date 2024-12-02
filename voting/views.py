@@ -78,4 +78,4 @@ def results(request, election_id):
     results = Counter(vote.candidate for vote in votes)
     sorted_results = sorted(results.items(), key=lambda x: x[1], reverse=True)
 
-    return render(request, "voting/results
+    return render(request, "voting/results.html")
