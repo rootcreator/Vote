@@ -26,7 +26,7 @@ def fund_account(account_id):
         transaction = (
             TransactionBuilder(
                 source_account=source_account,
-                network_passphrase=Network.PUBLIC_NETWORK_PASSPHRASE,
+                network_passphrase=Network.TESTNET_NETWORK_PASSPHRASE,
                 base_fee=100
             )
             .append_create_account_op(destination=account_id, starting_balance="2.0")
