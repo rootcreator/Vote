@@ -10,6 +10,7 @@ from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib import messages
 from .models import Candidate, Election, Vote
 from stellar_sdk.exceptions import BadRequestError  # Import the Stellar error
+from .stellar_utils import fund_account
 
 
 def register(request):
